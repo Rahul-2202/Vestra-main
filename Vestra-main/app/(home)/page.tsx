@@ -31,7 +31,7 @@ const HomePage = () => {
   return (
     <div className="h-screen text-white flex flex-col px-6 max-w-[1312px] relative scrollbar-hide mx-auto">
       <Header />
-      <main className="flex-grow flex flex-col items-center text-center lg:py-8 md:py-6">
+      <main className="flex flex-col items-center text-center lg:py-8 md:py-6">
         <div className="flex w-[90%] max-w-[653px] border border-[#2F2E2D] lg:h-14 h-[48px] items-center rounded-[100px] bg-[#0f0f0f] pl-6 pr-[2px] py">
           <Input
             type="email"
