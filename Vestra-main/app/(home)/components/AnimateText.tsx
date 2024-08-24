@@ -151,7 +151,7 @@ export default function AnimatedText() {
   return (
     <div className="flex items-center justify-center">
       <div
-        className="ml-1 text-[80px] md:text-[68px] font-thin font-ttfir text-center flex text-[#E52D27]"
+        className="ml-1 lg:text-[80px] md:text-[68px] font-thin font-ttfir text-center flex text-[#E52D27]"
         aria-live="polite"
         aria-atomic="true"
       >
