@@ -92,7 +92,7 @@ const useTextAnimation = (text: string, isVisible: boolean) => {
           setDisplayText(text.slice(0, index));
           textTimeoutId = setTimeout(() => animateIn(index + 1), 250); // Typing speed
         } else {
-          textTimeoutId = setTimeout(animateOut, 500); // Pause before animating out
+          textTimeoutId = setTimeout(animateOut, 100); // Pause before animating out
         }
       };
 
@@ -135,7 +135,7 @@ export default function AnimatedText() {
   const { displayText } = useTextAnimation(currentWord, true);
 
   useEffect(() => {
-    const wordDuration = currentWord.length * 300 + 5000; // Time to animate in, pause, and animate out
+    const wordDuration = currentWord.length * 500 + 1000; // Time to animate in, pause, and animate out
     const timeoutId = setTimeout(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, wordDuration);
@@ -151,7 +151,7 @@ export default function AnimatedText() {
   return (
     <div className="flex items-center justify-center">
       <div
-        className="ml-1 text-[80px] text-center flex text-[#E52D27]"
+        className="ml-1 text-[80px] md:text-[68px] font-thin font-ttfir text-center flex text-[#E52D27]"
         aria-live="polite"
         aria-atomic="true"
       >

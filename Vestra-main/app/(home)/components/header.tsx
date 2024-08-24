@@ -26,11 +26,11 @@ export const Header = () => {
           Join Waitlist
         </Button>
       </header>
-      <div className="flex justify-center items-center flex-col py-3 md:py-3 md:pt-0">
+      <div className="flex justify-center items-center flex-col py-3 md:py-3 md:pb-4 md:pt-0">
         <div className="text-[80px] p-0 md:text-[68px] mb-[-5px] md:mb-[-10px] font-medium font-ttfir text-center">
           Agent Systems
         </div>
-        <div className="text-[80px]  md:text-[68px] font-medium font-ttfir md:mb-[-5px] text-center flex">
+        <div className="text-[80px]  md:text-[68px] font-medium font-ttfir md:mb-[-5px] text-center items-center flex">
           Made {<AnimatedText />}
         </div>
         <p className="text-[#BFBFBF] text-[20px] md:text-[18px] font-medium md:font-semibold font-alliance text-center">
