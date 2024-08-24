@@ -107,7 +107,46 @@
 }
 
 .home-layout {
-  /* background-color: rgb(0, 0, 0); */
-  background-image: url("/assets/images/background.jpeg");
+  background-color: rgb(33, 33, 33);
+
+  background-image: url("/assets/images/background.png");
+  /* opacity: 0.5; */
+  /* background: url("/assets/images/background.png") cover no-repeat; */
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes word-opacity {
+  0% {
+    opacity: 0;
+  }
+  25%,
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink {
+  animation: blink 1.5s step-end infinite; /* Adjusted to match text animation speed */
+}
+
+.transition-char-opacity {
+  animation: word-opacity 2.5s ease-in-out linear;
 }
 

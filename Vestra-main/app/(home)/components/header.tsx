@@ -5,12 +5,12 @@ import AnimatedText from "./AnimateText";
 export const Header = () => {
   return (
     <>
-      <header className="flex justify-center md:justify-between items-center py-6">
+      <header className="flex justify-center md:justify-between md:px-[56px] items-center py-5 md:py-3 md:pb-2">
         <div className="flex items-center justify-center gap-1">
           <div className="w-10 h-10 md:w-[60px] md:h-[60px]">
             <Image
-              height={100}
-              width={100}
+              height={60}
+              width={60}
               src="assets/images/vestra.svg"
               alt="logo"
             />
@@ -21,22 +21,23 @@ export const Header = () => {
         </div>
         <Button
           variant="outline"
-          className="border-[#E52D27] py-4 px-6 bg-transparent hover:bg-transparent text-base rounded-[80px] h-[55px] w-[147px] text-white hover:text-white font-ttfir hidden md:block"
+          className="border-[#E52D27] py-4 px-6 md:py-3 md:px-4 bg-transparent hover:bg-transparent text-base rounded-[80px] h-[56px] w-[148px] md:h-[48px] md:w-[128px] text-white hover:text-white font-ttfir hidden md:block"
         >
           Join Waitlist
         </Button>
       </header>
-      <div className="flex justify-center items-center flex-col py-6">
-        <h1 className="text-5xl md:text-[80px] font-bold mb-4 font-ttfir text-center">
+      <div className="flex justify-center items-center flex-col py-3 md:py-3 md:pt-0">
+        <div className="text-[80px] p-0 md:text-[68px] mb-[-5px] md:mb-[-10px] font-medium font-ttfir text-center">
           Agent Systems
-        </h1>
-        <h1 className="text-5xl md:text-[80px] font-bold mb-4 font-ttfir text-center flex">
+        </div>
+        <div className="text-[80px]  md:text-[68px] font-medium font-ttfir md:mb-[-5px] text-center flex">
           Made {<AnimatedText />}
-        </h1>
-        <p className="text-[#BFBFBF] text-xl md:text-3xl font-normal md:font-medium font-alliance text-center">
+        </div>
+        <p className="text-[#BFBFBF] text-[20px] md:text-[18px] font-medium md:font-semibold font-alliance text-center">
           Build, deploy and monetize AI agent systems in minutes
         </p>
       </div>
     </>
   );
 };
+

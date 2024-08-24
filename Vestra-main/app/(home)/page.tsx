@@ -29,10 +29,10 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-scree text-white flex flex-col px-6 max-w-[1312px] relative mx-auto">
+    <div className="max-h-screen text-white flex flex-col px-6 max-w-[1312px] relative mx-auto">
       <Header />
       <main className="flex-grow flex flex-col items-center justify-center text-center">
-        <div className="flex w-[90%] max-w-[653px] border border-[#2F2E2D] h-14 md:h-[72px] items-center rounded-[100px] bg-[#0f0f0f] pl-6 pr-[2px]">
+        <div className="flex w-[90%] max-w-[653px] border border-[#2F2E2D] h-14 md:h-[48px] items-center rounded-[100px] bg-[#0f0f0f] pl-6 pr-[2px]">
           <Input
             type="email"
             placeholder="Enter your email address"
@@ -43,7 +43,7 @@ const HomePage = () => {
           />
           <Button
             variant="outline"
-            className="border-[#E52D27] py-4 px-6 bg-transparent hover:bg-transparent text-base rounded-[36px] md:rounded-[80px] h-12 md:h-[64px] w-[204px] text-white hover:text-white font-ttfir"
+            className="border-[#E52D27] py-4 md:py-3 px-6 md:px-4 bg-transparent hover:bg-transparent text-base rounded-[36px] md:rounded-[36px] h-12 md:h-[40px] w-[200px] md:w-[160px] text-white hover:text-white font-ttfir"
             onClick={joinWaitlist}
           >
             Join Waitlist
@@ -58,3 +58,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
