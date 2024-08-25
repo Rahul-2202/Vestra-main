@@ -126,6 +126,18 @@
   }
 }
 
+.animate-blink {
+  animation: blink 1.5s step-end infinite; /* Adjusted to match text animation speed */
+}
+/* Custom styles to hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
 @keyframes word-opacity {
   0% {
     opacity: 0;
@@ -142,20 +154,7 @@
   }
 }
 
-.animate-blink {
-  animation: blink 1.5s step-end infinite; /* Adjusted to match text animation speed */
-}
-
 .transition-char-opacity {
-  animation: word-opacity 2.5s ease-in-out linear;
-}
-
-/* Custom styles to hide scrollbar */
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-}
-.no-scrollbar {
-  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  animation: word-opacity 2.5s ease-in-out infinite;
 }
 

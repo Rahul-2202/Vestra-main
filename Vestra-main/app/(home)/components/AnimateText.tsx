@@ -13,7 +13,7 @@ const useTextAnimation = (text: string, isVisible: boolean) => {
       const animateIn = (index: number) => {
         if (index <= text.length) {
           setDisplayText(text.slice(0, index));
-          textTimeoutId = setTimeout(() => animateIn(index + 1), 250); // Typing speed
+          textTimeoutId = setTimeout(() => animateIn(index + 1), 350); // Typing speed
         } else {
           textTimeoutId = setTimeout(animateOut, 100); // Pause before animating out
         }
@@ -23,7 +23,7 @@ const useTextAnimation = (text: string, isVisible: boolean) => {
         const outAnimation = (index: number) => {
           if (index >= 0) {
             setDisplayText(text.slice(0, index));
-            textTimeoutId = setTimeout(() => outAnimation(index - 1), 250); // Deleting speed
+            textTimeoutId = setTimeout(() => outAnimation(index - 1), 350); // Deleting speed
           }
         };
         outAnimation(text.length);
@@ -58,7 +58,7 @@ export default function AnimatedText() {
   const { displayText } = useTextAnimation(currentWord, true);
 
   useEffect(() => {
-    const wordDuration = currentWord.length * 500 + 1000; // Time to animate in, pause, and animate out
+    const wordDuration = currentWord.length * 700 + 1000; // Time to animate in, pause, and animate out
     const timeoutId = setTimeout(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, wordDuration);
@@ -90,10 +90,10 @@ export default function AnimatedText() {
 
   return (
     <div className="text-[#E52D27]" aria-live="polite" aria-atomic="true">
-      <span className="transition-opacity duration-500 ease-in-out">
-        {displayText}
-      </span>
-      {isCursorVisible && <span className="animate-blink text-white">|</span>}
+      <span className="transition-opacity">{displayText}</span>
+      {isCursorVisible && (
+        <span className="animate-blink !font-thin text-white">|</span>
+      )}
     </div>
   );
 }
