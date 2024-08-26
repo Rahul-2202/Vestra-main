@@ -54,7 +54,7 @@ const HomePage = () => {
     <div className="min-h-screen text-white flex flex-col justify-between px-4 md:px-6 lg:px-8 max-w-[1312px] mx-auto">
       <Header />
       <main className="flex-grow flex flex-col items-center justify-around sm:justify-center text-center xl:mb-12">
-        <div className="2xl:py-12 flex flex-col md:items-center md:justify-center space-y-4 md:space-y-7 2xl:space-y-12">  
+        <div className="2xl:py-12 flex flex-col md:items-center md:justify-center space-y-4 md:space-y-7 2xl:space-y-12 md:pb-4">
           <Hero />
           <div className="flex w-full max-w-[652px] items-center border border-[#2F2E2D] h-[48px] md:h-14 rounded-[100px] bg-[#0f0f0f] pl-4  ">
             <Input
