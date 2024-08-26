@@ -24,6 +24,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -35,6 +36,10 @@ const config = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        inputGray: {
+          DEFAULT: "rgba(191, 191, 191, 0.60)",
+          foreground: "rgba(191, 191, 191, 0.60)",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -85,3 +90,4 @@ const config = {
 } satisfies Config;
 
 export default config;
+

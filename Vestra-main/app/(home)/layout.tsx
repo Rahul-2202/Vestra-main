@@ -17,7 +17,8 @@ const HomeLayout = ({ children }: Props) => {
           toastOptions={{
             unstyled: true,
             classNames: {
-              toast: "bg-[#1c1c1c] flex p-3 rounded-xl gap-3 items-center",
+              toast:
+                "bg-[#1c1c1c] flex py-3 px-5 rounded-2xl gap-3 items-center max-w-full md:max-w-[500px] whitespace-nowrap", // Updated class
               title: "font-ttfir text-base font-medium text-white",
             },
           }}
@@ -40,3 +41,4 @@ const HomeLayout = ({ children }: Props) => {
 };
 
 export default HomeLayout;
+

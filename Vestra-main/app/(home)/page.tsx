@@ -19,23 +19,44 @@ const HomePage = () => {
     setEmail(e.target.value);
   };
 
-  const joinWaitlist = () => {
-    if (email.length === 0) {
+  const joinWaitlist = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.length === 0 || !emailRegex.test(email)) {
       toast.warning("Almost there! Just need a valid email.");
       return;
     }
-    toast.success("You’re on the waitlist! Big things coming soon. 🎉");
-    setEmail("");
+
+    try {
+      console.log(JSON.stringify({ "email": email }));
+      const response = await fetch(
+        "https://api-hsd6yz4ala-uc.a.run.app/join_waitlist",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ "email": email }),
+        }
+      );
+
+      if (response.ok) {
+        toast.success("You’re on the waitlist! Big things coming soon. 🎉");
+        setEmail("");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again.");
+    }
   };
-  // overflow-y-scroll md:overflow-hidden scrollbar-hide
 
   return (
     <div className="min-h-screen text-white flex flex-col justify-between px-4 md:px-6 lg:px-8 max-w-[1312px] mx-auto">
       <Header />
-      <main className="flex-grow flex flex-col items-center justify-center text-center ">
+      <main className="flex-grow flex flex-col items-center justify-center text-center xl:mb-12">
         <div className="2xl:py-12 flex flex-col md:items-center md:justify-center space-y-4 md:space-y-6 2xl:space-y-12">
           <Hero />
-          <div className="flex w-full max-w-[652px] items-center border border-[#2F2E2D] h-[48px] md:h-14 rounded-[100px] bg-[#0f0f0f] pl-4 ">
+          <div className="flex w-full max-w-[652px] items-center border border-[#2F2E2D] h-[48px] md:h-14 rounded-[100px] bg-[#0f0f0f] pl-4  ">
             <Input
               type="email"
               placeholder="Enter your email address"
