@@ -13,13 +13,13 @@ export const Header = () => {
             alt="logo"
           />
         </div>
-        <span className="font-fauna text-2xl md:text-3xl gradient-text font-thin">
+        <span className="font-fauna text-2xl md:text-3xl lg:text-4xl gradient-text font-thin">
           VESTRA
         </span>
       </div>
       <Button
         variant="outline"
-        className="border-[#E52D27] py-2 px-4 md:py-2 md:px-4 md:h-12 bg-transparent hover:bg-transparent hover:text-white text-base text-center rounded-[80px] hidden md:block"
+        className="border-[#E52D27] py-2 px-4 md:py-2 md:px-4 lg:py-3 lg:px-6 md:h-12 lg:h-[3.25rem] bg-transparent hover:bg-transparent hover:text-white text-base text-center rounded-[80px] hidden md:block"
       >
         Join Waitlist
       </Button>

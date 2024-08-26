@@ -4,7 +4,7 @@ import { features } from "../../../config/features.json";
 export const FeatureCards = () => {
   return (
     <div className="flex w-full overflow-x-scroll md:overflow-hidden scrollbar-hide py-4 items-center justify-start md:justify-center xl:pt-5">
-      <div className="flex space-x-4 lg:px-0">
+      <div className="flex space-x-8 lg:px-0">
         {features.map((feature, index) => (
           <Card
             key={index}
@@ -24,4 +24,3 @@ export const FeatureCards = () => {
     </div>
   );
 };
-
