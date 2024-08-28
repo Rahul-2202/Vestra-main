@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="flex justify-center md:justify-between items-center p-4 xl:pt-5 md:px-[56px] ">
+    <header className="flex justify-center items-center p-4 xl:pt-5 md:px-[56px] ">
       <div className="flex items-center justify-center gap-1">
         <div className="w-12 h-12 md:w-[4rem] md:h-[4rem]">
           <Image
@@ -17,12 +17,12 @@ export const Header = () => {
           VESTRA
         </span>
       </div>
-      <Button
+      {/* <Button
         variant="outline"
         className="border-[#E52D27] py-2 px-4 md:py-2 md:px-4 lg:py-3 lg:px-6 md:h-12 lg:h-[3.25rem] bg-transparent hover:bg-transparent hover:text-white text-base text-center rounded-[80px] hidden md:block"
       >
         Join Waitlist
-      </Button>
+      </Button> */}
     </header>
   );
 };
