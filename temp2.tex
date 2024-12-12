@@ -1,0 +1,132 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure the PDF is machine-readable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+% Heading
+\begin{center}
+    {\Huge \scshape Rahul Manglani} \\ \vspace{1pt}
+    Kanpur, 208022 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +917071660165 ~ 
+    \href{mailto:rahulmanglani0@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{rahulmanglani0@gmail.com}} ~
+    \href{https://linkedin.com/in/your-linkedin}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/your-linkedin}} ~
+    \href{https://github.com/your-github}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/your-github}}
+\end{center}
+
+% Education
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {National Institute of Technology, Rourkela}{July 2021 – Present}
+    {B.Tech in Mining Engineering, Minor in ECE}{Rourkela, Odisha}
+\resumeSubHeadingListEnd
+
+% Relevant Coursework
+\section{Relevant Coursework}
+\begin{multicols}{4}
+\begin{itemize}[itemsep=-5pt]
+    \item\small Data Structures
+    \item Algorithms
+    \item Computer Networks
+    \item DBMS
+    \item OOPs
+\end{itemize}
+\end{multicols}
+
+% Experience
+\section{Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {AIsence}{May 2024 – July 2024}
+    {Software Development Intern}{Gurugram}
+    \resumeItemListStart
+        \resumeItem{Built an astrology AI chatbot leveraging open-source LLMs and integrated with Firebase backend services.}
+        \resumeItem{Deployed LLMs on AWS and GCP to enhance accessibility and performance.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% Projects
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {\textbf{Expense Tracker WebApp}}{September 2023}
+    {Developed a Django application for tracking finances and budgeting.}{}
+    \resumeSubHeadingListEnd
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in]
+\small{
+    \item \textbf{Languages:} JavaScript, TypeScript, Python, Java, SQL
+    \item \textbf{Frameworks:} Django, Firebase Cloud Functions, React, Node.js
+    \item \textbf{Databases:} MongoDB, Firebase Firestore, MySQL
+    \item \textbf{Others:} Version Control (Git), Cloud Platforms (AWS, GCP)
+}
+\end{itemize}
+
+\end{document}
+
