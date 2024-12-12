@@ -1,0 +1,139 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+    \item\small{
+        \textbf{#1}{: #2 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Rahul Manglani} & Email : \href{mailto:perahulmanglani0@gmail.com}{perahulmanglani0@gmail.com}\\        
+    & Mobile : +917071660165 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {National Institute of Technology, Rourkela}{Rourkela, Odisha}
+    {B.Tech in Mining Engineering; CGPA: 7.96/10}{July 2021 -- Present}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+    {AIsence}{Gurugram}
+    {Software Development Intern}{May 2024 - July 2024}
+    \resumeItemListStart
+        \resumeItem{Astrology AI Chatbot}
+        {Developed using LLMs and RAG, providing enhanced user interaction.}
+        \resumeItem{Deployment on AWS and GCP}
+        {Established scalable service delivery architectures.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Skello}{Gurugram}
+    {Software Development Intern}{May 2023 - July 2023}
+    \resumeItemListStart
+        \resumeItem{UI Enhancement}
+        {Boosted operations productivity by 40\% through frontend improvements.}
+        \resumeItem{Backend Features}
+        {Enhanced Firebase integrations leading to a 20\% rise in engagement.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {SocialBet, TradeX}{Gurugram}
+    {Software Development Intern}{Dec 2023 - Jan 2024}
+    \resumeItemListStart
+        \resumeItem{Scalable Backend}
+        {Created infrastructure using Firebase Cloud Functions.}
+        \resumeItem{Dynamic Dashboard}
+        {Utilized Next.js to improve operational workflows.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeSubItem{Expense Tracker WebApp}
+    {Designed a Django-based application for financial management.}
+    \resumeSubItem{EMI-Collection-Prediction}
+    {Developed a predictive model for forecasting EMI defaults.}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\item{
+    \textbf{Languages}{: JavaScript, TypeScript, Python, Java, SQL}
+    \hfill
+    \textbf{Technologies}{: React.js, Firebase, Django, MySQL}
+}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
+
