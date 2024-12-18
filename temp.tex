@@ -1,139 +1,203 @@
+    \documentclass[letterpaper,11pt]{article}
+    \usepackage{latexsym}
+    \usepackage[empty]{fullpage}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}  
+    \usepackage{enumitem}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \usepackage{tabularx}
+    \usepackage{fontawesome5}
+    \usepackage{multicol}
+    \setlength{\multicolsep}{-3.0pt}
+    \setlength{\columnsep}{-1pt}
+    \input{glyphtounicode}
 
-\documentclass[letterpaper,11pt]{article}
+    \pagestyle{fancy}
+    \fancyhf{} % Clear header and footer fields
+    \fancyfoot{}
+    \renewcommand{\headrulewidth}{0pt}       
+    \renewcommand{\footrulewidth}{0pt}       
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
+    % Adjust margins
+    \addtolength{\oddsidemargin}{-0.6in}     
+    \addtolength{\evensidemargin}{-0.5in}    
+    \addtolength{\textwidth}{1.2in}
+    \addtolength{\topmargin}{-.7in}
+    \addtolength{\textheight}{1.4in}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+    \urlstyle{same}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+    \raggedbottom
+    \raggedright
+    \setlength{\tabcolsep}{0in}
 
-\urlstyle{same}
+    % Sections formatting
+    \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\bfseries
+    }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+    \pdfgentounicode=1
 
-% Sections formatting
-\titleformat{\section}{
-    \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
+    % Custom commands
+    \newcommand{\resumeItem}[1]{
     \item\small{
-        \textbf{#1}{: #2 \vspace{-2pt}}
+        {#1 \vspace{-2pt}}
     }
-}
+    }
 
-\newcommand{\resumeSubheading}[4]{
-    \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2 \\
+    \newcommand{\classesList}[4]{
+        \item\small{
+            {#1 #2 #3 #4 \vspace{-2pt}}      
+    }
+    }
+
+    \newcommand{\resumeSubheading}[4]{       
+    \vspace{-2pt}\item
+        \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textbf{\small #2} \\  
         \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
+        \end{tabular*}\vspace{-7pt}
+    }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+    \newcommand{\resumeSubSubheading}[2]{    
+        \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+        \end{tabular*}\vspace{-7pt}
+    }
 
-\renewcommand{\labelitemii}{$\circ$}
+    \newcommand{\resumeProjectHeading}[2]{   
+        \item
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & \textbf{\small #2}\\      
+        \end{tabular*}\vspace{-7pt}
+    }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+    \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+    \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\begin{document}
+    \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}  
+    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+    \newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{Rahul Manglani} & Email : \href{mailto:perahulmanglani0@gmail.com}{perahulmanglani0@gmail.com}\\        
-    & Mobile : +917071660165 \\
-\end{tabular*}
 
-%-----------EDUCATION-----------------
-\section{Education}
-\resumeSubHeadingListStart
-    \resumeSubheading
-    {National Institute of Technology, Rourkela}{Rourkela, Odisha}
-    {B.Tech in Mining Engineering; CGPA: 7.96/10}{July 2021 -- Present}
-\resumeSubHeadingListEnd
+    \begin{document}
+    \begin{center}
+        {\Huge \scshape Rahul Manglani }\\   
+        \vspace{1pt}
+        27/15, Dabouli, Kanpur, 208022 \\ \vspace{1pt}
+        \small \raisebox{-0.1\height}\faPhone\ +917071660165 ~ \href{mailto:perahulmanglani0@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{perahulmanglani0@gmail.com}} ~
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-\resumeSubHeadingListStart
+        \href{Linkedin}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}} ~        
+        \href{Github}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}}
+        \vspace{-8pt}
+    \end{center}
 
-    \resumeSubheading
-    {AIsence}{Gurugram}
-    {Software Development Intern}{May 2024 - July 2024}
+    \section{Education}
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+        {National Institute of Technology, Rourkela}{July 2021 – Present}
+        {B.Tech in Mining Engineering, Minor in ECE, CGPA: 7.96}{Rourkela, Odisha}        
+
+    \resumeSubHeadingListEnd
+
+    % Relevant Coursework
+    \section{Relevant Coursework}
+    \begin{multicols}{4}
+    \begin{itemize}[itemsep=-2pt]
+    \item Data Structures
+\item Algorithms
+\item Computer Networks
+\item Statistics
+\item DBMS
+\item OOPs
+    \end{itemize}
+    \end{multicols}
+
+
+    % Experience Section
+    \section{Experience}
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+        {AIsence}{May 2024 – July 2024}      
+        {Software Development Intern}{Gurugram}
+        \resumeItemListStart
+            \resumeItem{Designed and implemented scalable AI chatbot using open-source large language models, improving user interaction and engagement.}
+    \resumeItem{Deployed machine learning models on AWS and GCP, optimizing cloud infrastructure.}
+        \resumeItemListEnd
+
+
+        \resumeSubheading
+        {Skello}{May 2023 – July 2023}       
+        {Software Development Intern}{Gurugram}
+        \resumeItemListStart
+            \resumeItem{Enhanced backend infrastructure with Firebase Cloud Functions, boosting operational metrics and user engagement by 20.}
+    \resumeItem{Developed a React and TypeScript dashboard that increased UI responsiveness by 30 and team productivity by 40.}      
+        \resumeItemListEnd
+
+
+        \resumeSubheading
+        {SocialBet, TradeX}{Dec 2023 - Jan 2024}
+        {Software Development Intern}{Gurugram}
+        \resumeItemListStart
+            \resumeItem{Implemented scalable backend systems using Firebase Cloud Functions for a trading platform, ensuring high availability and performance.}
+    \resumeItem{Collaborated with cross-functional teams to improve product features, enhancing user experience.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+    \section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\textbf{Expense Tracker WebApp} $|$ \emph{Django, Python, MySQL}}{September 2023}
+            \resumeItemListStart
+                    \resumeItem{ Developed a user-friendly application for managing finances, allowing features for income tracking and budget planning.}
+        \resumeItem{Integrated OAuth for secure user authentication.}
+            \resumeItemListEnd
+            \vspace{-13pt}
+
+
+        \resumeProjectHeading
+            {\textbf{EMI-Collection-Prediction} $|$ \emph{Scikit-learn, Neural Networks}}{September 2023}
+            \resumeItemListStart
+                    \resumeItem{Created a predictive model for EMI collections, enhancing risk management strategies and customer allocation.}
+            \resumeItemListEnd
+            \vspace{-13pt}
+
+    \resumeSubHeadingListEnd
+    \vspace{0pt}
+
+    % Technical Skills Section
+    \section{Technical Skills}
     \resumeItemListStart
-        \resumeItem{Astrology AI Chatbot}
-        {Developed using LLMs and RAG, providing enhanced user interaction.}
-        \resumeItem{Deployment on AWS and GCP}
-        {Established scalable service delivery architectures.}
+    \item \textbf{Languages:} JavaScript, TypeScript, Python, Java, SQL
+    \item \textbf{Tools:} Docker, Postman, GitHub Actions
+    \item \textbf{Technologies:} Django, Node.js, Firebase, MySQL, MongoDB, Redis
     \resumeItemListEnd
 
-    \resumeSubheading
-    {Skello}{Gurugram}
-    {Software Development Intern}{May 2023 - July 2023}
-    \resumeItemListStart
-        \resumeItem{UI Enhancement}
-        {Boosted operations productivity by 40\% through frontend improvements.}
-        \resumeItem{Backend Features}
-        {Enhanced Firebase integrations leading to a 20\% rise in engagement.}
-    \resumeItemListEnd
+    \vspace{-10pt}
+    \section{Leadership / Extracurricular}   
+    \resumeSubHeadingListStart
 
-    \resumeSubheading
-    {SocialBet, TradeX}{Gurugram}
-    {Software Development Intern}{Dec 2023 - Jan 2024}
-    \resumeItemListStart
-        \resumeItem{Scalable Backend}
-        {Created infrastructure using Firebase Cloud Functions.}
-        \resumeItem{Dynamic Dashboard}
-        {Utilized Next.js to improve operational workflows.}
-    \resumeItemListEnd
+        \resumeSubheading
+        {INNOVISION, NIT Rourkela}{2023}     
+        {Core Team Member}{Rourkela, Odisha} 
+        \resumeItemListStart
+        \resumeItem{Contributed to the planning and execution of a techno-management fest.}
+\resumeItem{Led fundraising efforts, securing significant investment for event execution.}
+        \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\section{Projects}
-\resumeSubHeadingListStart
-    \resumeSubItem{Expense Tracker WebApp}
-    {Designed a Django-based application for financial management.}
-    \resumeSubItem{EMI-Collection-Prediction}
-    {Developed a predictive model for forecasting EMI defaults.}
-\resumeSubHeadingListEnd
-
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-\resumeSubHeadingListStart
-\item{
-    \textbf{Languages}{: JavaScript, TypeScript, Python, Java, SQL}
-    \hfill
-    \textbf{Technologies}{: React.js, Firebase, Django, MySQL}
-}
-\resumeSubHeadingListEnd
-
-%-------------------------------------------
-\end{document}
-
+    \end{document}
